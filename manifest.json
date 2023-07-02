@@ -1,0 +1,29 @@
+{
+"name": "PT Chrome Extension",
+"version": "3.5",
+"manifest_version": 3,
+"description": "Description of my extension",
+"options_page": "options.html",
+"permissions": [
+"tabs",
+"scripting",
+"storage"
+],
+"host_permissions": [
+"https://www.phantasytour.com/*"
+],
+"options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+"content_scripts": [
+{
+"matches": [
+"https://www.phantasytour.com/bands/phish*"
+],
+"js": [
+"content.js"
+]
+}
+]
+}

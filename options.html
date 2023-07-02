@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PT Options</title>
+  </head>
+  <body>
+
+    <fieldset>
+      <legend>Threads:</legend>
+      <br>
+	    Enter the words that you would like ignored in thread titles in lower case comma separated<br><br>
+      <input type="text" id="threadsToIgnore" /><br>
+      ex:  trump, goose, rc:, happy friday
+      <br>
+      <br>
+    </fieldset>
+
+    <br><br>
+    <fieldset>
+      <legend>Posts:</legend>
+      <br>
+	  Enter the list of users or words that you would like blocked in posts.  This will hide posts if people quote users in this list<br><br>
+      <input type="text" id="postToIgnore" /><br>
+      ex:  phish, tuckyourface, grizzlyadams, micr0_glaze
+      <br>
+      <br>
+    </fieldset>
+
+    <br>
+    <div id="status"></div><br>
+    <button id="saveBtn">Save</button>
+
+    <br>
+    <br>
+    <script src="./options.js"></script>
+  </body>
+</html>
