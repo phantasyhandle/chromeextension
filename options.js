@@ -1,9 +1,8 @@
 // Saves options to chrome.storage
 const saveOptions = () => {
-  const threadsToIgnore = document.getElementById('threadsToIgnore').value;
-  const postToIgnore = document.getElementById('postToIgnore').value;
+  const shitHeadsAndShitThreadsToIgnore = document.getElementById('shitHeadsAndShitThreadsToIgnore').value;
   chrome.storage.sync.set(
-    { threadsToIgnore: threadsToIgnore, postToIgnore: postToIgnore },
+    { shitHeadsAndShitThreadsToIgnore: shitHeadsAndShitThreadsToIgnore},
     () => {
       // Update status to let user know options were saved.
       const status = document.getElementById('status');
@@ -19,10 +18,9 @@ const saveOptions = () => {
 // stored in chrome.storage.
 const restoreOptions = () => {
   chrome.storage.sync.get(
-    { threadsToIgnore: '', postToIgnore: '' },
+    { shitHeadsAndShitThreadsToIgnore: ''},
     (items) => {
-      document.getElementById('threadsToIgnore').value = items.threadsToIgnore;
-      document.getElementById('postToIgnore').value = items.postToIgnore;
+      document.getElementById('shitHeadsAndShitThreadsToIgnore').value = items.shitHeadsAndShitThreadsToIgnore;
     }
   );
 };
